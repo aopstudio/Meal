@@ -1,0 +1,67 @@
+#username{
+    margin-left: 150px;
+}
+#nav{
+    height:83px;
+    background-color:#C5B6B6;
+}
+#user{
+    margin-left:1300px;
+}
+iframe{
+    padding-top:100px;
+    border:none;
+}
+#user>div{
+    display:inline-block;
+    margin:0px 20px;
+    width:50px;
+}
+#header,#sou{
+    width:100px;
+    padding-left:24px;
+    padding-right:24px;
+    text-align:center;
+}
+#sousuo{
+    width:145px;
+    padding:50px 0px;
+    background-color:#C5B6B6;
+    margin-bottom:-160px;
+}
+div>ul>li{
+    float:left;
+    padding:25px 50px;
+    font-size:24px;
+    cursor:pointer;
+}
+.types>li{
+    margin:20px 0px;
+}
+.types{
+    background-color:#C5B6B6;
+    width:100px;
+    text-align:left;
+    padding-bottom:10px;
+    margin-bottom:-250px;
+    position:relative;
+}
+li{
+    list-style-type:none;
+    z-index:1;
+}
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */
+{
+    transform: translateX(10px);
+    opacity: 0;
+}
+#headimage{
+    text-align: center;
+}

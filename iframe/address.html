@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <style type="text/css">
+        #info{
+            margin: 50px;
+            font-size: 24px;
+        }
+        #now{
+            margin: 20px 10px;
+            font-size: 24px;
+        }
+        button,input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <div id="now">
+        地址：{{address}}
+        </div>
+        <button @click="show=true">修改地址</button>
+        <input type="text" v-model="address" v-if="show">
+        <button @click="show=false" v-if="show">确认</button>
+    </div>
+    <script src="info.js"></script>
+</body>
+</html>

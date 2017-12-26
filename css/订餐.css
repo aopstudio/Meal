@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+  #top-nav{
+	  height:40px;
+	  background-color:#BFB6B6;
+	  font-size:18px;
+	  color:rgb(7,22,90)
+  }
+  #left {
+	    margin-top:-40px;
+		background-color:rgb(7,22,90);
+  		width:233px;
+		height:800px;
+		font-family:Microsoft YaHei,Helvitica,Verdana,tohoma,Arial,san-serif;
+	}
+	#home{
+		padding-left:20px;
+		height:30px;
+	}
+	#functions{
+		padding-left:20px;
+		height:50px;
+	}
+	.options .submenu{
+		margin-left:80px;
+	    padding:5px 0px;
+	    color:#F5E9E9;  font-size:20px
+	}
+   .options {
+	  padding:5px 0px;
+	  color:#F5E9E9;  font-size:20px;
+	  height:40px;
+  }
+
+  p {margin-left: 20px;}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        #info{
+            font-size: 20px;
+        }
+        button{
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../image/aop.jpg" alt="头像" width="200px">
+    <div id="info">昵称：{{username}}<br>
+        <button @click="show=true">更改昵称</button>
+        <br>
+        <input type="text" v-if="show" v-model="username">
+        <button @click="show=false" v-if="show">确认</button>
+    </div>
+
+    <script src="info.js"></script>
+</body>
+</html>

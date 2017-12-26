@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	text-align:center;
+	background:url(image/glass.jpg)
+}
+#login{
+	color:#FFFFFF;
+}
+.in{
+	margin:40px 0px;
+	font-size:24px
+}
+form{
+	margin-top:80px;
+}
+.btns { 
+	width:146px;
+	height:45px; 
+	color:#000000;
+	font-size:20px;
+} 
+select{
+	height:25px;
+	width:100px;
+	font-size:18px;
+}
+h1{
+	margin-bottom:50px;
+}

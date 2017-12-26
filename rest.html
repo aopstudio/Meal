@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/rest.css" />
+    <script src="js/vue.js"></script>
+<title>无标题文档</title>
+</head>
+<body>
+<div id="app">
+    <div id="headimage">
+        <img src="image/headimage.png" alt="页首图" width="1400px">
+    </div>
+	<div id="nav">
+        <ul>
+            <li>餐厅名称</li>
+            <li @click="show=true;url='iframe/liangcai.html'">堂食</li>
+            <li @click="show=true;url='iframe/liangcai.html'">外卖</li>
+            <li @click="show=false;url='iframe/queue.html'">排队信息</li>
+            <li @click="show=false;url='iframe/buju.html'">餐厅布局</li>
+        </ul>
+    </div>
+        <div id="meal-type" v-if="show">
+            <ul>
+                <li @click="url='iframe/liangcai.html'">凉菜</li>
+                <li @click="url='iframe/tuijian.html'">主厨推荐</li>
+                <li @click="url='iframe/dongbei.html'">东北菜</li>
+                <li @click="url='iframe/zhejiang.html'">浙菜</li>
+                <li @click="url='iframe/zhushi.html'">主食</li>
+                <li @click="url='iframe/tang.html'">汤</li>
+                <li @click="url='iframe/jiushui.html'">酒水饮料</li>
+            </ul>
+        </div>
+        <div id="meals">
+            <iframe name="options" id="options" width="1000px" height="1000px" v-bind:src='url'>
+            </iframe>
+        </div>
+    <div id="ordered">
+        已点的菜：<br>
+        <ul>
+            <li v-for="food in foodList">{{food}}</li>
+        </ul>
+    </div>
+</div>
+<script src="js/rest.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	select{
+		margin-left:100px;
+		height:30px;
+		font-size:20px;
+		display:block;
+	}
+	#rest{
+		margin-left:50px;
+		display:inline-block;
+	}
+	.rests{
+		width=200px;
+		height:350px;
+		margin:50px 50px;
+		text-align:center;
+		display:inline-block;
+		font-size:20px;
+		border:solid 1px;
+		cursor:pointer;
+	}
+	p{
+		font-size:24px;
+		margin-top:50px;
+		margin-left:50px;
+	}
+	.restsimage{
+		width="200";
+		height="200";
+	}
+	
+</style>
+<title>无标题文档</title>
+</head>
+<body>
+	<select>
+	  <option>综合排序</option>
+      <option>距离由远到近</option>
+	  <option>价格由低到高</option>
+    </select>
+    <div id="rest">
+    	<div class="rests" id="kfc" onclick="top.location.href='../rest.html'">
+        	<img class="restsimage" src="../image/kfc.png">
+            <br>肯德基<br>
+            人均20元<br>
+            距离1km
+        </div>
+        <div class="rests" id="mcd" <div onclick="top.location.href='../rest.html'">
+        	<img class="restsimage" src="../image/mcd.png">
+            <br>麦当劳<br>
+            人均20元<br>
+            距离1km
+        </div>
+        <div class="rests" id="pizza" onclick="top.location.href='../rest.html'">
+        	<img class="restsimage" src="../image/pizza.png">
+            <br>必胜客<br>
+            人均40元<br>
+            距离1km
+        </div>
+    </div>
+</body>
+</html>

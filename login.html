@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+	function $(id)
+	{
+	  return document.getElementById(id);
+	}
+//验证姓名
+	function checkname(){
+	  var name=$("name").value;
+	  if(name==''||name==null)
+	  {
+	   window.alert("用户名不能为空");
+	   return false;
+	  }
+	  else
+	  {
+		return true;
+	  }
+	}
+	function checkpwd(){
+	  var password=$("key").value;
+	  if(password==''||password==null)
+	  {
+	   window.alert("密码不能为空");
+	   return false;
+	  }
+	  else
+	  {
+		return true;
+	  }
+	}
+	function checkall()
+	{
+	  if(checkname()&&checkpwd())
+	  {
+		return true;
+	  }
+	  else
+	  {
+		return false;
+	  }
+	}
+	function jump(){
+		if(checkall()){
+			if(document.getElementById('select').options[document.getElementById('select').selectedIndex].text=="商家")
+				window.location="管理.html";
+			if(document.getElementById('select').options[document.getElementById('select').selectedIndex].text=="顾客")
+				window.location="用户.html";
+		}
+	}
+</script>	
+<link rel="stylesheet" type="text/css" href="login.css" />
+<title>无标题文档</title>
+</head>
+<body>	
+	<div id="login">
+    	<h1>登录</h1>
+        登录类型：
+        <select id="select">
+          <option value ="商家">商家</option>
+          <option value ="顾客">顾客</option>
+		</select>
+        	<div class="in">
+        	用户名<br>
+        	<input  id="name" type="text"><br>
+            </div>
+            <div class="in">
+            密码<br>
+            <input  id="key" type="password">
+            </div>
+            <input type="submit"  onClick="jump()" class="btns" value="登录" />
+    </div>
+
+</body>
+</html>
