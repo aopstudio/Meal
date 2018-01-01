@@ -4,18 +4,12 @@ var app=new Vue({
         show: true,
         url:null,
         foodList:[
-            {
-                name:'cong',
-                price:10
-            },
-            {
-                name:'jiang',
-                price:5
-            },
-            {
-                name:'suan',
-                price:4.5
-            }
+
         ]
+    },
+    methods:{
+        add:function () {
+            this.foodList.push('锅包肉');
+        }
     }
 })

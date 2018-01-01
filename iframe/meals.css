@@ -4,6 +4,7 @@
     margin:20px 20px;
     text-align:center;
     display:inline-block;
+    cursor: pointer;
 }
 .mealimage{
     width: 200px;

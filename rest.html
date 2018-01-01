@@ -4,6 +4,7 @@
 <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
 <title>无标题文档</title>
 </head>
 <body>
@@ -37,6 +38,7 @@
         </div>
     <div id="ordered">
         已点的菜：<br>
+        <button @click="add">点我</button>
         <ul>
             <li v-for="food in foodList">{{food}}</li>
         </ul>

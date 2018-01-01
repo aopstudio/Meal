@@ -12,3 +12,7 @@ new Vue({
         }
     }
 });
+
+function add() {
+    parent.window.document.getElementById()
+}
