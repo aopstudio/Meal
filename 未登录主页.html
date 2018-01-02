@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="js/vue.js">
+    </script>
+    <script>
+        function login() {
+            window.location.href='login.html'
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/user.css" />
+    <style type="text/css">
+        #nav>ul>li>ul>li{
+            cursor: pointer;
+        }
+    </style>
+    <title>主页</title>
+</head>
+<body>
+<div id="headimage">
+    <img src="image/headimage.png" alt="页首图" width="1400px">
+</div>
+<div id="nav">
+    <ul>
+        <li><a href="iframe/index.html" target="options">首页</a>
+        </li>
+        <li id="header" @mouseover="show = true" @mouseout="show=false" >餐厅
+            <transition name="slide-fade">
+                <ul class="types"  v-if="show">
+                    <li onclick="login()">西餐</li>
+                    <li onclick="login()">中餐</li>
+                    <li onclick="login()">甜品店</li>
+                    <li onclick="login()">烘培店</li>
+                </ul>
+            </transition>
+        </li>
+        <li id="sou" @click="show = !show" >搜索 <img src="image/搜索.png" width="20px">
+            <transition  name="slide-fade">
+                <div id="sousuo"  v-if="show">
+                    <form>
+                        <input type="search" style="display:block">
+                        <input type="submit" value="搜索">
+                    </form>
+                </div>
+            </transition>
+        </li>
+        <li style="margin-left: 800px" onclick="login()">登录</li>
+    </ul>
+</div>
+
+<script src="js/user.js">
+</script>
+
+</div>
+<div >
+    <iframe name="options" id="options" src="iframe/index.html" width="1800px" height="1000px">
+    </iframe>
+</div>
+</body>
+</html>

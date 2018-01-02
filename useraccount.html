@@ -22,9 +22,15 @@
             list-style: none;
         }
         #nav{
-            height: 50px;
-            background-color: #F5E9E9;
-            font-size: 20px;
+            height:83px;
+            background-color:#C5B6B6;
+        }
+        div>ul>li{
+            float:left;
+            padding:25px 50px;
+            font-size:24px;
+            cursor:pointer;
+            list-style: none;
         }
         #settings>ul>li:hover{
             background-color: #BFB6B6;
@@ -62,8 +68,12 @@
         <img src="image/headimage.png" alt="页首图">
     </div>
     <div id="nav">
-        <div class="options" id="back">返回主界面</div>
-        <div class="options" id="quit">注销</div>
+        <ul>
+            <li onclick="window.location.href='顾客主页.html'">首页</li>
+            <li id="quit" onclick="window.location.href='login.html'" style="margin-left: 1000px">
+                注销
+            </li>
+        </ul>
     </div>
     <div id="option">
         <div id="settings">

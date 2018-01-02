@@ -25,12 +25,6 @@
                 </ul>
             </transition>
             </li>
-            <li>我的订单
-            </li>
-            <li>收藏
-            </li>
-            <li>历史记录
-            </li>
             <li id="sou" @click="show = !show" >搜索 <img src="image/搜索.png" width="20px">
             	<transition  name="slide-fade">
                 	<div id="sousuo"  v-if="show">
@@ -41,11 +35,11 @@
                     </div>
                 </transition>
             </li>
-            <li id="username">
-                用户名
+            <li id="username" onclick="window.location.href='useraccount.html'">
+                zhedong
             </li>
-            <li id="quit">
-                <a href="login.html">注销</a>
+            <li id="quit" onclick="window.location.href='login.html'">
+                注销
             </li>
         </ul>   
     </div>

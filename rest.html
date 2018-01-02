@@ -25,7 +25,12 @@
         .meals{
             width: 1000px;
             height: 650px;
+            margin-left: 70px;
+            padding-right: 40px;
             overflow: auto;
+        }
+        #ordered{
+            margin-left: 40px;
         }
     </style>
 <title>无标题文档</title>
@@ -37,9 +42,12 @@
     </div>
 	<div id="nav">
         <ul>
-            <li>餐厅名称</li>
+            <li onclick="window.location.href='顾客主页.html'">返回</li>
+            <li style="cursor: auto">餐厅名称</li>
             <li onclick="window.open('iframe/queue.html')">排队信息</li>
             <li onclick="window.open('iframe/buju.html')">餐厅布局</li>
+            <li onclick="window.open('useraccount.html')" style="margin-left: 300px">zhedong</li>
+            <li onclick="window.location.href='login.html'">注销</li>
         </ul>
     </div>
     <!--
