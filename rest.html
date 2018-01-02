@@ -4,7 +4,30 @@
 <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <script src="js/vue.js"></script>
-    <script src="js/vue-router.js"></script>
+    <style type="text/css">
+        .meal{
+            width:200px;
+            height:300px;
+            margin:20px 20px;
+            text-align:center;
+            display:inline-block;
+        }
+        .mealimage{
+            width: 200px;
+            height:200px;
+        }
+        .name{
+            font-size:16px;
+        }
+        .price{
+            font-size:18px;
+        }
+        .meals{
+            width: 1000px;
+            height: 650px;
+            overflow: auto;
+        }
+    </style>
 <title>无标题文档</title>
 </head>
 <body>
@@ -15,12 +38,11 @@
 	<div id="nav">
         <ul>
             <li>餐厅名称</li>
-            <li @click="show=true;url='iframe/liangcai.html'">堂食</li>
-            <li @click="show=true;url='iframe/liangcai.html'">外卖</li>
-            <li @click="show=false;url='iframe/queue.html'">排队信息</li>
-            <li @click="show=false;url='iframe/buju.html'">餐厅布局</li>
+            <li onclick="window.open('iframe/queue.html')">排队信息</li>
+            <li onclick="window.open('iframe/buju.html')">餐厅布局</li>
         </ul>
     </div>
+    <!--
         <div id="meal-type" v-if="show">
             <ul>
                 <li @click="url='iframe/liangcai.html'">凉菜</li>
@@ -31,17 +53,35 @@
                 <li @click="url='iframe/tang.html'">汤</li>
                 <li @click="url='iframe/jiushui.html'">酒水饮料</li>
             </ul>
-        </div>
+        </div>-->
         <div id="meals">
+            <!--
             <iframe name="options" id="options" width="1000px" height="1000px" v-bind:src='url'>
             </iframe>
+            -->
+            <div class="meals">
+                <cai name="锅包肉" price="21"></cai>
+                <cai name="地三鲜" price="12"></cai>
+                <cai name="杀猪菜" price="35"></cai>
+                <cai name="大骨" price="40"></cai>
+                <cai name="红烧肉" price="20"></cai>
+                <cai name="宫保鸡丁" price="18"></cai>
+                <cai name="西湖醋鱼" price="50"></cai>
+                <cai name="龙井虾仁" price="50"></cai>
+                <cai name="炸响铃" price="12"></cai>
+                <cai name="咸菜大黄鱼" price="60"></cai>
+                <cai name="东坡肉" price="40"></cai>
+            </div>
+            <!--<script src="iframe/cai.js"></script>-->
         </div>
     <div id="ordered">
-        已点的菜：<br>
-        <button @click="add">点我</button>
-        <ul>
+        <button @click="clearList" style="width: 100px;height: 40px;font-size: 20px;margin-bottom: 20px">清空</button>
+        <button @click="information" style="width: 100px;height: 40px;font-size: 20px;margin-bottom: 20px">提交</button>
+        <br>已点的菜：<br>
+        <ul id="orderedlist">
             <li v-for="food in foodList">{{food}}</li>
         </ul>
+        <div>总价：{{totalPrice}}元</div>
     </div>
 </div>
 <script src="js/rest.js"></script>
