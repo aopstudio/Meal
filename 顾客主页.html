@@ -13,15 +13,15 @@
     </div>
 	<div id="nav">
         <ul>
-        	<li><a href="iframe/index.html" target="options">首页</a>
+        	<li>首页
             </li>
             <li id="header" @mouseover="show = true" @mouseout="show=false" >餐厅
             <transition name="slide-fade">
             	<ul class="types"  v-if="show">
-                    <li><a href="rest.html">西餐</a></li>
-                    <li><a href="rest.html">中餐</a></li>
-                    <li><a href="rest.html">甜品店</a></li>
-                    <li><a href="rest.html">烘培店</a></li>
+                    <li onclick="window.location.href='rest.html'">西餐</li>
+                    <li onclick="window.location.href='rest.html'">中餐</li>
+                    <li onclick="window.location.href='rest.html'">甜品店</li>
+                    <li onclick="window.location.href='rest.html'">烘培店</li>
                 </ul>
             </transition>
             </li>
@@ -48,9 +48,37 @@
 	</script>
     
     </div>
-    <div >
-    	<iframe name="options" id="options" src="iframe/index.html" width="1800px" height="1000px">
-        </iframe>
+    <div style="margin-top: 50px">
+    	<!--<iframe name="options" id="options" src="iframe/index.html" width="1800px" height="1000px">
+        </iframe>-->
+        <select>
+            <option>综合排序</option>
+            <option>距离由远到近</option>
+            <option>价格由低到高</option>
+        </select>
+        <div id="rest">
+            <div class="rests" id="kfc" onclick="top.location.href='rest.html'">
+                <img class="restsimage" src="image/kfc.png">
+                <div style="color: #FFFFFF"><br>肯德基<br>
+                人均20元<br>
+                距离1km
+                </div>
+            </div>
+            <div class="rests" id="mcd" onclick="top.location.href='rest.html'">
+            <img class="restsimage" src="image/mcd.png">
+            <div style="color: #FFFFFF"><br>麦当劳<br>
+            人均20元<br>
+            距离1km
+            </div>
+        </div>
+            <div class="rests" id="pizza" onclick="top.location.href='rest.html'">
+                <img class="restsimage" src="image/pizza.png">
+            <div style="color: #FFFFFF"><br>必胜客<br>
+                人均40元<br>
+                距离1km
+            </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

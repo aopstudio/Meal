@@ -15,9 +15,13 @@
 	   window.alert("用户名不能为空");
 	   return false;
 	  }
+	  else if(name=='zhedong'){
+	      return true;
+      }
 	  else
 	  {
-		return true;
+	    window.alert("用户名错误");
+		return false;
 	  }
 	}
 	function checkpwd(){
@@ -27,9 +31,13 @@
 	   window.alert("密码不能为空");
 	   return false;
 	  }
+	  else if(password=='hello'){
+	      return true;
+      }
 	  else
 	  {
-		return true;
+	      window.alert("密码错误");
+		  return false;
 	  }
 	}
 	function checkall()

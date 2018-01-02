@@ -1,7 +1,10 @@
-
+body{
+    background: url(../image/glass.jpg);
+    color: #FFFFFF;
+}
 #nav{
     height:83px;
-    background-color:#C5B6B6;
+    background-color:rgb(7,22,100);
 
 }
 #nav>ul>li{
