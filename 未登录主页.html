@@ -4,18 +4,8 @@
     <meta charset="utf-8">
     <script src="js/vue.js">
     </script>
-    <script>
-        function login() {
-            window.location.href='login.html'
-        }
-    </script>
     <link rel="stylesheet" type="text/css" href="css/user.css" />
-    <style type="text/css">
-        #nav>ul>li>ul>li{
-            cursor: pointer;
-        }
-    </style>
-    <title>主页</title>
+    <title>无标题文档</title>
 </head>
 <body>
 <div id="headimage">
@@ -23,29 +13,21 @@
 </div>
 <div id="nav">
     <ul>
-        <li><a href="iframe/index.html" target="options">首页</a>
+        <li>首页
         </li>
         <li id="header" @mouseover="show = true" @mouseout="show=false" >餐厅
             <transition name="slide-fade">
                 <ul class="types"  v-if="show">
-                    <li onclick="login()">西餐</li>
-                    <li onclick="login()">中餐</li>
-                    <li onclick="login()">甜品店</li>
-                    <li onclick="login()">烘培店</li>
+                    <li onclick="window.location.href='login.html'">西餐</li>
+                    <li onclick="window.location.href='login.html'">中餐</li>
+                    <li onclick="window.location.href='login.html'">甜品店</li>
+                    <li onclick="window.location.href='login.html'">烘培店</li>
                 </ul>
             </transition>
         </li>
-        <li id="sou" @click="show = !show" >搜索 <img src="image/搜索.png" width="20px">
-            <transition  name="slide-fade">
-                <div id="sousuo"  v-if="show">
-                    <form>
-                        <input type="search" style="display:block">
-                        <input type="submit" value="搜索">
-                    </form>
-                </div>
-            </transition>
+        <li id="sou" onclick="window.location.href='login.html'" >搜索 <img src="image/搜索.png" width="20px">
         </li>
-        <li style="margin-left: 800px" onclick="login()">登录</li>
+        <li onclick="window.location.href='login.html'">登录</li>
     </ul>
 </div>
 
@@ -53,9 +35,37 @@
 </script>
 
 </div>
-<div >
-    <iframe name="options" id="options" src="iframe/index.html" width="1800px" height="1000px">
-    </iframe>
+<div style="margin-top: 50px">
+    <!--<iframe name="options" id="options" src="iframe/index.html" width="1800px" height="1000px">
+    </iframe>-->
+    <select>
+        <option>综合排序</option>
+        <option>距离由远到近</option>
+        <option>价格由低到高</option>
+    </select>
+    <div id="rest">
+        <div class="rests" id="kfc" onclick="top.location.href='login.html'">
+            <img class="restsimage" src="image/kfc.png">
+            <div style="color: #FFFFFF"><br>肯德基<br>
+                人均20元<br>
+                距离1km
+            </div>
+        </div>
+        <div class="rests" id="mcd" onclick="top.location.href='login.html'">
+            <img class="restsimage" src="image/mcd.png">
+            <div style="color: #FFFFFF"><br>麦当劳<br>
+                人均20元<br>
+                距离1km
+            </div>
+        </div>
+        <div class="rests" id="pizza" onclick="top.location.href='login.html'">
+            <img class="restsimage" src="image/pizza.png">
+            <div style="color: #FFFFFF"><br>必胜客<br>
+                人均40元<br>
+                距离1km
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

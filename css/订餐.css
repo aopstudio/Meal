@@ -1,5 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+    body{
+    }
   #top-nav{
 	  height:40px;
 	  background-color:#BFB6B6;
@@ -21,7 +23,7 @@
 		padding-left:20px;
 		height:50px;
 	}
-	.options .submenu{
+	/*.options .submenu{
 		margin-left:80px;
 	    padding:5px 0px;
 	    color:#F5E9E9;  font-size:20px
@@ -30,6 +32,33 @@
 	  padding:5px 0px;
 	  color:#F5E9E9;  font-size:20px;
 	  height:40px;
+  }*/
+  .submenu{
+	  background-color: rgb(7,22,100);
+      width: 250px;
+      display: inline-block;
+      margin: 20px 50px;
+      height: 650px;
+      color: #FFFFFF;
+      vertical-align: top;
+      text-align: center;
+      overflow: auto;
   }
-
+  .submenu>div{
+      margin: 50px 25px;
+      font-size: 20px;
+  }
+  .order{
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      background-color: #C5B6B6;
+      color: black;
+  }
+  #order{
+      overflow: auto;
+  }
+  #queue>div{
+      margin: 30px 0;
+  }
   p {margin-left: 20px;}
